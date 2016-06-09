@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Punktestand:   0"
+        android:id="@+id/textView_score"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Themenauswahl"
+        android:id="@+id/textView_topic_selection"
+        android:layout_below="@+id/textView_score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Zurück"
+        android:id="@+id/button_back_to_Main"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_below="@+id/textView_topic_selection"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:text="Topic 1"
+                android:id="@+id/button_topic1" />
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:text="Topic 3"
+                android:id="@+id/button_topic3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:text="Topic 2"
+                android:id="@+id/button_topic2" />
+
+            <Button
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:text="Topic 4"
+                android:id="@+id/button_topic4" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
