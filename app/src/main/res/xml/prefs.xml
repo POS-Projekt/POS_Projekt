@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<CheckBoxPreference android:key="Chemiestry"
+    android:title="Chemie"/>
+    <CheckBoxPreference android:key="Physics"
+        android:title="Physik"/>
+    <CheckBoxPreference android:key="History"
+        android:title="Geschichte"/>
+    <CheckBoxPreference android:key="Sports"
+        android:title="Sport"/>
+    <CheckBoxPreference android:key="Nature"
+        android:title="Natur"/>
+    <CheckBoxPreference android:key="TV"
+        android:title="Fernsehen"/>
+    <CheckBoxPreference android:key="Any"
+        android:title="Sonstige"/>
+</PreferenceScreen>
