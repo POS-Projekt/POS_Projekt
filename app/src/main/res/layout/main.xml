@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Neues Spiel"
         android:id="@+id/button_newGame"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/imageView_logo"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -64,4 +64,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#ffffff" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView_logo"
+        android:layout_below="@+id/textView_title"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

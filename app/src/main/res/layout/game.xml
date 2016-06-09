@@ -46,7 +46,7 @@
 
     <TextView
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Hier steht die erste Frage"
         android:id="@+id/textView_question"
@@ -56,7 +56,8 @@
         android:layout_gravity="center_horizontal"
         android:textStyle="bold"
         android:background="#ffffff"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:paddingTop="25dp" />
 
     <Button
         android:layout_width="300dp"
@@ -78,6 +79,46 @@
         android:layout_height="wrap_content"
         android:text="Antwort 3"
         android:id="@+id/button_answer3"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Antwort 4"
+        android:id="@+id/button_answer4"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Joker 1"
+            android:id="@+id/button_joker" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Joker 2"
+            android:id="@+id/button_joker2" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Joker 3"
+            android:id="@+id/button_joker3" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Zurück"
+        android:id="@+id/button_back_to_main"
         android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
