@@ -1,31 +1,16 @@
 package com.example.ratzf.pos_projekt;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
+import android.preference.PreferenceActivity;
 
 /**
  * Created by preiter on 09.06.2016.
  */
-public class Category extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        initalizeLayout();
+public class Category extends PreferenceActivity {
+    public void onCreate(Bundle bundle)
+    {
+        super.onCreate(bundle);
+        addPreferencesFromResource(R.xml.prefs);
     }
 
-    private void initalizeLayout() {
-        Button saveEnd = (Button) findViewById(R.id.buttonSaveAndBack);
-
-        saveEnd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-    }
 }
