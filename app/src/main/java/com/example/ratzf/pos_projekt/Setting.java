@@ -61,7 +61,7 @@ public class Setting extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                onDestroy();
             }
         });
     }

@@ -16,10 +16,8 @@ public class NewQuestion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-        setContentView(R.layout.main);
-=======
-        setContentView(R.layout.activity_main);
+
+        setContentView(R.layout.background);
 
         openDialog();
     }
@@ -30,17 +28,19 @@ public class NewQuestion extends AppCompatActivity {
         LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.new_question, null);
         builder.setView(layout);
 
-        EditText question = (EditText) layout.findViewById(R.id.editTextQuestion);
-        EditText wrongAnswer1 = (EditText) layout.findViewById(R.id.editTextWrongAnswer1);
-        EditText wrongAnswer2 = (EditText) layout.findViewById(R.id.editTextWrongAnswer2);
-        EditText wrongAnswer3 = (EditText) layout.findViewById(R.id.editTextWrongAnswer3);
-        EditText rightAnswer = (EditText) layout.findViewById(R.id.editTextRightAnswer);
+        final EditText question = (EditText) layout.findViewById(R.id.editTextQuestion);
+        final EditText wrongAnswer1 = (EditText) layout.findViewById(R.id.editTextWrongAnswer1);
+        final EditText wrongAnswer2 = (EditText) layout.findViewById(R.id.editTextWrongAnswer2);
+        final EditText wrongAnswer3 = (EditText) layout.findViewById(R.id.editTextWrongAnswer3);
+        final EditText rightAnswer = (EditText) layout.findViewById(R.id.editTextRightAnswer);
 
         builder.setPositiveButton("Speichern", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                QuestionClass questionClass = new QuestionClass()
-                saveQuestion();
+                QuestionClass questionClass = new QuestionClass(question.getText().toString(),
+                        wrongAnswer1.getText().toString(), wrongAnswer2.getText().toString(),
+                        wrongAnswer3.getText().toString(), rightAnswer.getText().toString());
+                saveQuestion(questionClass);
             }
         });
 
@@ -48,7 +48,7 @@ public class NewQuestion extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
-                finish();
+                onDestroy();
             }
         });
 
@@ -56,12 +56,16 @@ public class NewQuestion extends AppCompatActivity {
         dialog.show();
     }
 
-    private void saveQuestion()
+    private void saveQuestion(QuestionClass questionClass)
     {
         DBHelper helper = new DBHelper(getBaseContext());
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(Constants.QUESTION, );
->>>>>>> 5038a0469cf5f82818e642f4f5612f629a0b3e30
+        values.put(Constants.QUESTION, questionClass.getQuestion());
+        values.put(Constants.WRONGANSWER1, questionClass.getWrongAnswer1());
+        values.put(Constants.WRONGANSWER2, questionClass.getWrongAnswer2());
+        values.put(Constants.WRONGANSWER3, questionClass.getWrongAnswer3());
+        values.put(Constants.RIGHTANSWER, questionClass.getRightAnswer());
+        db.insert(Constants.TABLE_NAME, null, values);
     }
 }
