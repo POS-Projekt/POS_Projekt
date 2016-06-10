@@ -30,7 +30,8 @@
         android:text="Neues Spiel"
         android:id="@+id/button_newGame"
         android:layout_below="@+id/imageView_logo"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="new_Game"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -52,7 +53,8 @@
         android:layout_alignLeft="@+id/button_highscore"
         android:layout_alignStart="@+id/button_highscore"
         android:layout_alignRight="@+id/button_highscore"
-        android:layout_alignEnd="@+id/button_highscore" />
+        android:layout_alignEnd="@+id/button_highscore"
+        android:onClick="new_Options"/>
 
     <TextView
         android:layout_width="wrap_content"

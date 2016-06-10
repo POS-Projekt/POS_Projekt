@@ -16,10 +16,9 @@ public class NewQuestion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
+
         setContentView(R.layout.main);
-=======
-        setContentView(R.layout.activity_main);
+
 
         openDialog();
     }
@@ -39,7 +38,7 @@ public class NewQuestion extends AppCompatActivity {
         builder.setPositiveButton("Speichern", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                QuestionClass questionClass = new QuestionClass()
+                //QuestionClass questionClass = new QuestionClass()
                 saveQuestion();
             }
         });
@@ -61,7 +60,7 @@ public class NewQuestion extends AppCompatActivity {
         DBHelper helper = new DBHelper(getBaseContext());
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(Constants.QUESTION, );
->>>>>>> 5038a0469cf5f82818e642f4f5612f629a0b3e30
+        //values.put(Constants.QUESTION, );
+
     }
 }
