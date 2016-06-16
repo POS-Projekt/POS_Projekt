@@ -12,7 +12,7 @@ public class DBHelper extends SQLiteOpenHelper {
     Context context;
 
     public DBHelper(Context context) {
-        super(context, Constants.TABLE_NAME, null, Constants.DB_Version);
+        super(context, Constants.DB_NAME, null, Constants.DB_Version);
         this.context = context;
     }
 

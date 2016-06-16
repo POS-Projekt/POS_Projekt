@@ -5,7 +5,7 @@ package com.example.ratzf.pos_projekt;
  */
 public class Constants {
 
-    public static final int DB_Version = 1;
+    public static final int DB_Version = 3;
     public static final String DB_NAME = "question.db";
 
     public static final String TABLE_NAME = "Questions";
@@ -23,7 +23,11 @@ public class Constants {
     public static final String SQL_DROP = "DROP TABLE IF EXISTS "+ TABLE_NAME;
     public static final String SQL_CREATE = "CREATE TABLE " + TABLE_NAME+"(" + QUESTION_ID +
             " INTEGER PRIMARY KEY,"+ CATEGORY + " STRING,"+ QUESTION+" STRING,"+ WRONGANSWER1+
-            " STRING," + WRONGANSWER2 + " STRING"+ WRONGANSWER3 + " STRING" + RIGHTANSWER +
+            " STRING," + WRONGANSWER2 + " STRING,"+ WRONGANSWER3 + " STRING," + RIGHTANSWER +
             " STRING" +")";
+
+    public static final String STMT_INSERT = "INSERT INTO " + TABLE_NAME + "(" + CATEGORY +"," + QUESTION +
+            "," + WRONGANSWER1 +"," + WRONGANSWER2 +"," + WRONGANSWER3 + "," +RIGHTANSWER + ") "+
+            "VALUES (?,?,?,?,?,?)";
 
 }
