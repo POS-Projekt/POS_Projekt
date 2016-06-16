@@ -1,6 +1,4 @@
 <resources>
-<<<<<<< HEAD
-    <string name="app_name">POS_Projekt</string>
     <array name="categories">
         <item>Chemie</item>
         <item>Physik</item>
@@ -10,7 +8,6 @@
         <item>Fersehen</item>
         <item>Sonstiges</item>
     </array>
-=======
+
     <string name="app_name">Wissensapp</string>
->>>>>>> 10495da635461c942fdf33145ea50cf8860e4839
 </resources>

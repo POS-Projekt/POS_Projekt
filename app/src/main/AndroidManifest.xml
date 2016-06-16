@@ -15,8 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Topic_Selection"/>
-        <activity android:name=".Setting"/>
+        <activity android:name=".Topic_Selection" />
+        <activity android:name=".Setting" />
+        <activity android:name=".Category" />
+        <activity android:name=".NewQuestion" />
+        <activity android:name=".Rules" />
     </application>
 
 </manifest>

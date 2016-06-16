@@ -18,20 +18,7 @@ public class NewQuestion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-<<<<<<< HEAD
         setContentView(R.layout.background);
-
-        setContentView(R.layout.main);
-=======
-
-        setContentView(R.layout.background);
-
-        setContentView(R.layout.main);
-
-
->>>>>>> 10495da635461c942fdf33145ea50cf8860e4839
-
         openDialog();
     }
 
@@ -55,19 +42,11 @@ public class NewQuestion extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-<<<<<<< HEAD
                 QuestionClass questionClass = new QuestionClass(categorySpinner.getSelectedItem().toString()
                         , question.getText().toString(), wrongAnswer1.getText().toString(),
                         wrongAnswer2.getText().toString(), wrongAnswer3.getText().toString(),
                         rightAnswer.getText().toString());
                 saveQuestion(questionClass);
-=======
-                QuestionClass questionClass = new QuestionClass(question.getText().toString(),
-                        wrongAnswer1.getText().toString(), wrongAnswer2.getText().toString(),
-                        wrongAnswer3.getText().toString(), rightAnswer.getText().toString());
-                saveQuestion(questionClass);
-
->>>>>>> 10495da635461c942fdf33145ea50cf8860e4839
             }
         });
 
@@ -88,22 +67,15 @@ public class NewQuestion extends AppCompatActivity {
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-<<<<<<< HEAD
+
         values.put(Constants.CATEGORY, questionClass.getCategory());
-=======
->>>>>>> 10495da635461c942fdf33145ea50cf8860e4839
+
         values.put(Constants.QUESTION, questionClass.getQuestion());
         values.put(Constants.WRONGANSWER1, questionClass.getWrongAnswer1());
         values.put(Constants.WRONGANSWER2, questionClass.getWrongAnswer2());
         values.put(Constants.WRONGANSWER3, questionClass.getWrongAnswer3());
         values.put(Constants.RIGHTANSWER, questionClass.getRightAnswer());
         db.insert(Constants.TABLE_NAME, null, values);
-<<<<<<< HEAD
-=======
 
-        //values.put(Constants.QUESTION, );
-
-
->>>>>>> 10495da635461c942fdf33145ea50cf8860e4839
     }
 }

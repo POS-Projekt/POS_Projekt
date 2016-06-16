@@ -18,12 +18,6 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Anzahl der Fragen"
-            android:id="@+id/buttonNumberOfQuestions" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Eigene Frage erstellen"
             android:id="@+id/buttonNewQuesiton" />
 
