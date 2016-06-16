@@ -53,8 +53,7 @@
         android:layout_alignLeft="@+id/button_highscore"
         android:layout_alignStart="@+id/button_highscore"
         android:layout_alignRight="@+id/button_highscore"
-        android:layout_alignEnd="@+id/button_highscore"
-        android:onClick="new_Options"/>
+        android:layout_alignEnd="@+id/button_highscore" />
 
     <TextView
         android:layout_width="wrap_content"

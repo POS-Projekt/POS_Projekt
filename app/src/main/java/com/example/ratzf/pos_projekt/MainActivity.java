@@ -5,6 +5,7 @@ import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -21,6 +22,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main);
         ImageView logo = (ImageView) findViewById(R.id.imageView_logo);
         Picasso.with(this).load("file:///android_asset/Logo.PNG").resize(150,150).into(logo);
+        Button newOption = (Button) findViewById(R.id.button_options);
+        newOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent new_Options = new Intent(MainActivity.this,Setting.class);
+                startActivity(new_Options);
+            }
+        });
     }
 
     public void new_Game(View view){
@@ -30,9 +39,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void new_Options(View view){
-
-        Intent new_Options = new Intent(this,Setting.class);
-        startActivity(new_Options);
-    }
 }
