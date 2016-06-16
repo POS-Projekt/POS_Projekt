@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".Topic_Selection"/>
         <activity android:name=".Setting"/>
+        <activity android:name=".Highscore"/>
     </application>
 
 </manifest>

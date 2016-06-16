@@ -16,14 +16,7 @@ public class NewQuestion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.background);
-
-        setContentView(R.layout.main);
-
-
-
         openDialog();
     }
 
