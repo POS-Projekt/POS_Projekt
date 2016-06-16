@@ -17,12 +17,12 @@ public class NewQuestion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-<<<<<<< HEAD
+
         setContentView(R.layout.background);
-=======
+
         setContentView(R.layout.main);
 
->>>>>>> b7366e1bd0146e7935fbfeb3332611e7af5486da
+
 
         openDialog();
     }
@@ -42,15 +42,12 @@ public class NewQuestion extends AppCompatActivity {
         builder.setPositiveButton("Speichern", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-<<<<<<< HEAD
+
                 QuestionClass questionClass = new QuestionClass(question.getText().toString(),
                         wrongAnswer1.getText().toString(), wrongAnswer2.getText().toString(),
                         wrongAnswer3.getText().toString(), rightAnswer.getText().toString());
                 saveQuestion(questionClass);
-=======
-                //QuestionClass questionClass = new QuestionClass()
-                saveQuestion();
->>>>>>> b7366e1bd0146e7935fbfeb3332611e7af5486da
+
             }
         });
 
@@ -71,16 +68,16 @@ public class NewQuestion extends AppCompatActivity {
         DBHelper helper = new DBHelper(getBaseContext());
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
-<<<<<<< HEAD
+
         values.put(Constants.QUESTION, questionClass.getQuestion());
         values.put(Constants.WRONGANSWER1, questionClass.getWrongAnswer1());
         values.put(Constants.WRONGANSWER2, questionClass.getWrongAnswer2());
         values.put(Constants.WRONGANSWER3, questionClass.getWrongAnswer3());
         values.put(Constants.RIGHTANSWER, questionClass.getRightAnswer());
         db.insert(Constants.TABLE_NAME, null, values);
-=======
+
         //values.put(Constants.QUESTION, );
 
->>>>>>> b7366e1bd0146e7935fbfeb3332611e7af5486da
+
     }
 }
