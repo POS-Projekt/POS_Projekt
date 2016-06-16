@@ -1,3 +1,13 @@
 <resources>
+    <array name="categories">
+        <item>Chemie</item>
+        <item>Physik</item>
+        <item>Geschichte</item>
+        <item>Sport</item>
+        <item>Natur</item>
+        <item>Fersehen</item>
+        <item>Sonstiges</item>
+    </array>
+
     <string name="app_name">Wissensapp</string>
 </resources>

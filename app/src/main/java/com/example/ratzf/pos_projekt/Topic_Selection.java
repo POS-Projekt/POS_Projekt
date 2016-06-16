@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by ratzf on 10.06.2016.
@@ -37,11 +38,22 @@ public class Topic_Selection extends AppCompatActivity{
         buttons.add(button_topic2);
         buttons.add(button_topic3);
         buttons.add(button_topic4);
-
-
-
-
-
+        ArrayList<String> topics = new ArrayList<>();
+        for (QuestionClass question : MainActivity.questions){
+            if (!topics.contains(question.getCategory())){
+                topics.add(question.getCategory());
+            }
+        }
+        Random r = new Random();
+        boolean 
+        ArrayList<String> used = new ArrayList<>();
+        for (Button button : buttons){
+            int i = r.nextInt(topics.size() - 0) + 0;
+                if (!used.contains(topics.get(i))){
+                    button.setText(topics.get(i));
+                    used.add(topics.get(i));
+                }
+        }
         for (Button button : buttons){
             button.setOnClickListener(new View.OnClickListener() {
                 @Override

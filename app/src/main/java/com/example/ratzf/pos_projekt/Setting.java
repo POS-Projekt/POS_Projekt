@@ -20,19 +20,10 @@ public class Setting extends AppCompatActivity {
 
     private void initaleButtons()
     {
-        Button numberQuestions = (Button) findViewById(R.id.buttonNumberOfQuestions);
         Button ownQuestion = (Button) findViewById(R.id.buttonNewQuesiton);
         final Button category = (Button) findViewById(R.id.buttonCategory);
         Button rules = (Button) findViewById(R.id.buttonRules);
         Button back = (Button) findViewById(R.id.buttonBack);
-
-        numberQuestions.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), NumberQuestion.class);
-                startActivity(intent);
-            }
-        });
 
         ownQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +52,7 @@ public class Setting extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onDestroy();
+               finish();
             }
         });
     }

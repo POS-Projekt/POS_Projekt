@@ -1,0 +1,58 @@
+[
+  {
+    "Kategorie" : "Sport",
+    "Frage": "Wo findet die EM 2016 statt?",
+    "A1" : "Spanien",
+    "A2" : "Österreich",
+    "A3" : "Belgien",
+    "A4" : "Frankreich"
+  },
+  {
+    "Kategorie" : "Chemie",
+    "Frage": "Welches ist ein Edelmetall?",
+    "A1" : "Chlor",
+    "A2" : "Wasserstoff",
+    "A3" : "Schwefel",
+    "A4" : "Neon"
+  },
+  {
+    "Kategorie" : "Physik",
+    "Frage": "Welche Linse braucht man bei enem Teleskop?",
+    "A1" : "Streulinse",
+    "A2" : "Sammellinse",
+    "A3" : "Gar keine",
+    "A4" : "Streu und Sammellinse"
+  },
+  {
+    "Kategorie" : "TV",
+    "Frage": "Wer spielt in Grey's Anattomy DR. Meredith Grey?",
+    "A1" : "Tessa Ferrer",
+    "A2" : "Kelly McCreary",
+    "A3" : "Meghan Trainer",
+    "A4" : "Ellen Pompeo"
+  },
+  {
+    "Kategorie" : "Natur",
+    "Frage": "Welcher Baum besitzt Blätter ähnlich einer Herzform?",
+    "A1" : "Efeu",
+    "A2" : "Tanne",
+    "A3" : "Eiche",
+    "A4" : "Linde"
+  },
+  {
+    "Kategorie" : "Geschichte",
+    "Frage": "Wer hat die Schulpflicht in Österreich festgelegt?",
+    "A1" : "Friedrich 2.",
+    "A2" : "Joseph 2.",
+    "A3" : "Marie Antoinette",
+    "A4" : "Maria Theresia"
+  },
+  {
+    "Kategorie" : "Sonstige",
+    "Frage": "LifeRadio hat den ....?",
+    "A1" : "neuen Namen RadioOÖ2",
+    "A2" : "Zielgruppenschnitt von 30",
+    "A3" : "Gar nichts",
+    "A4" : "Coolen neuen Sound für OÖ"
+  }
+]
