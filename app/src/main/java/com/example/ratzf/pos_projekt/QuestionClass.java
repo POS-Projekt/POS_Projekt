@@ -4,9 +4,10 @@ package com.example.ratzf.pos_projekt;
  * Created by preiter on 09.06.2016.
  */
 public class QuestionClass {
-    String question, wrongAnswer1, wrongAnswer2, wrongAnswer3, rightAnswer;
+    String question, wrongAnswer1, wrongAnswer2, wrongAnswer3, rightAnswer, category;
 
-    public QuestionClass(String question, String wrongAnswer1, String wrongAnswer2, String wrongAnswer3, String rightAnswer) {
+    public QuestionClass(String category, String question, String wrongAnswer1, String wrongAnswer2, String wrongAnswer3, String rightAnswer) {
+        this.category = category;
         this.question = question;
         this.wrongAnswer1 = wrongAnswer1;
         this.wrongAnswer2 = wrongAnswer2;
@@ -34,6 +35,10 @@ public class QuestionClass {
         return question;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     public void setWrongAnswer1(String wrongAnswer1) {
         this.wrongAnswer1 = wrongAnswer1;
     }
@@ -52,5 +57,9 @@ public class QuestionClass {
 
     public void setQuestion(String question) {
         this.question = question;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

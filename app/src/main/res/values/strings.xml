@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">POS_Projekt</string>
+    <array name="categories">
+        <item>Chemie</item>
+        <item>Physik</item>
+        <item>Geschichte</item>
+        <item>Sport</item>
+        <item>Natur</item>
+        <item>Fersehen</item>
+        <item>Sonstiges</item>
+    </array>
 </resources>

@@ -10,18 +10,20 @@ public class Constants {
 
     public static final String TABLE_NAME = "Questions";
     public static final String QUESTION_ID = "ID";
+    public static final String CATEGORY = "CATEGORY";
     public static final String QUESTION = "QUESTION";
     public static final String WRONGANSWER1 = "WRONGANSWER1";
     public static final String WRONGANSWER2 = "WRONGANSWER2";
     public static final String WRONGANSWER3 = "WRONGANSWER3";
     public static final String RIGHTANSWER = "WIRTEANSWER";
 
-    public static final String[] ALL_COLUMNS = new String[] {QUESTION_ID + " AS _id", QUESTION,
-            WRONGANSWER1, WRONGANSWER2, WRONGANSWER3, RIGHTANSWER};
+    public static final String[] ALL_COLUMNS = new String[] {QUESTION_ID + " AS _id", CATEGORY,
+            QUESTION, WRONGANSWER1, WRONGANSWER2, WRONGANSWER3, RIGHTANSWER};
 
     public static final String SQL_DROP = "DROP TABLE IF EXISTS "+ TABLE_NAME;
     public static final String SQL_CREATE = "CREATE TABLE " + TABLE_NAME+"(" + QUESTION_ID +
-            " INTEGER PRIMARY KEY,"+ QUESTION+" STRING,"+ WRONGANSWER1+" STRING," + WRONGANSWER2 +
-            " STRING"+ WRONGANSWER3 + " STRING" + RIGHTANSWER + " STRING" +")";
+            " INTEGER PRIMARY KEY,"+ CATEGORY + " STRING,"+ QUESTION+" STRING,"+ WRONGANSWER1+
+            " STRING," + WRONGANSWER2 + " STRING"+ WRONGANSWER3 + " STRING" + RIGHTANSWER +
+            " STRING" +")";
 
 }
