@@ -45,19 +45,29 @@ public class Topic_Selection extends AppCompatActivity{
             }
         }
         Random r = new Random();
-        boolean 
         ArrayList<String> used = new ArrayList<>();
+
+        int i =0;
         for (Button button : buttons){
-            int i = r.nextInt(topics.size() - 0) + 0;
+            do {
+                 i = r.nextInt(topics.size() - 0) + 0;
                 if (!used.contains(topics.get(i))){
                     button.setText(topics.get(i));
-                    used.add(topics.get(i));
                 }
+            }while(used.contains(topics.get(i)));
+            used.add(topics.get(i));
         }
+
+
+
         for (Button button : buttons){
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    Button button = (Button) v;
+                    String topic = button.getText().toString();
+
 
                 }
             });

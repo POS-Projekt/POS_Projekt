@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    public  static ArrayList<QuestionClass> questions = new ArrayList<>();
+    public static ArrayList<QuestionClass> questions = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
