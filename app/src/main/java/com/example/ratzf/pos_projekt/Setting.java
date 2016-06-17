@@ -28,24 +28,24 @@ public class Setting extends AppCompatActivity {
         ownQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), NewQuestion.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(getBaseContext(), NewQuestion.class);
+                startActivity(intent1);
             }
         });
 
         category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Category.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(getBaseContext(), Category.class);
+                startActivity(intent2);
             }
         });
 
         rules.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Rules.class);
-                startActivity(intent);
+                Intent intent3 = new Intent(getBaseContext(), Rules.class);
+                startActivity(intent3);
             }
         });
 

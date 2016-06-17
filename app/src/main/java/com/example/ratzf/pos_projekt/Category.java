@@ -2,7 +2,6 @@ package com.example.ratzf.pos_projekt;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by preiter on 09.06.2016.

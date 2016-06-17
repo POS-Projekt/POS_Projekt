@@ -1,8 +1,8 @@
 package com.example.ratzf.pos_projekt;
 
-import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -23,7 +23,7 @@ public class NewQuestion extends AppCompatActivity {
     }
 
     private void openDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getBaseContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.new_question, null);
         builder.setView(layout);
 
@@ -42,7 +42,7 @@ public class NewQuestion extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                QuestionClass questionClass = new QuestionClass(categorySpinner.getSelectedItem().toString()
+                QuestionClass questionClass = new QuestionClass(Integer.toString((int) categorySpinner.getSelectedItemId())
                         , question.getText().toString(), wrongAnswer1.getText().toString(),
                         wrongAnswer2.getText().toString(), wrongAnswer3.getText().toString(),
                         rightAnswer.getText().toString());
@@ -54,10 +54,9 @@ public class NewQuestion extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
-                onDestroy();
+                finish();
             }
         });
-
         AlertDialog dialog = builder.create();
         dialog.show();
     }
@@ -65,17 +64,15 @@ public class NewQuestion extends AppCompatActivity {
     private void saveQuestion(QuestionClass questionClass) {
         DBHelper helper = new DBHelper(getBaseContext());
         SQLiteDatabase db = helper.getWritableDatabase();
-        ContentValues values = new ContentValues();
+        SQLiteStatement stmt = db.compileStatement(Constants.STMT_INSERT);
 
+        stmt.bindString(1, questionClass.getCategory());
+        stmt.bindString(2, questionClass.getQuestion());
+        stmt.bindString(3, questionClass.getWrongAnswer1());
+        stmt.bindString(4, questionClass.getWrongAnswer2());
+        stmt.bindString(5, questionClass.getWrongAnswer3());
+        stmt.bindString(6, questionClass.getRightAnswer());
 
-        values.put(Constants.CATEGORY, questionClass.getCategory());
-
-        values.put(Constants.QUESTION, questionClass.getQuestion());
-        values.put(Constants.WRONGANSWER1, questionClass.getWrongAnswer1());
-        values.put(Constants.WRONGANSWER2, questionClass.getWrongAnswer2());
-        values.put(Constants.WRONGANSWER3, questionClass.getWrongAnswer3());
-        values.put(Constants.RIGHTANSWER, questionClass.getRightAnswer());
-        db.insert(Constants.TABLE_NAME, null, values);
-
+        finish();
     }
 }
