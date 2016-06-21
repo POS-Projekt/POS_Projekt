@@ -66,10 +66,8 @@ public class Topic_Selection extends AppCompatActivity{
                 @Override
                 public void onClick(View v) {
 
-                    /*Button button = (Button) v;
-                    String topic = button.getText().toString();*/
-                    Intent intent = new Intent(getBaseContext(), GameOver.class);
-                    startActivity(intent);
+                    Button button = (Button) v;
+                    String topic = button.getText().toString();
                 }
             });
         }
