@@ -5,7 +5,7 @@ package com.example.ratzf.pos_projekt;
  */
 public class Constants {
 
-    public static final int DB_Version = 3;
+    public static final int DB_Version = 4;
     public static final String DB_NAME = "question.db";
 
     public static final String TABLE_NAME = "Questions";
@@ -29,5 +29,19 @@ public class Constants {
     public static final String STMT_INSERT = "INSERT INTO " + TABLE_NAME + "(" + CATEGORY +"," + QUESTION +
             "," + WRONGANSWER1 +"," + WRONGANSWER2 +"," + WRONGANSWER3 + "," +RIGHTANSWER + ") "+
             "VALUES (?,?,?,?,?,?)";
+
+    public static final String TABLE_NAME2 = "Highscore";
+    public static final String HIGHSCORE_ID = "HID";
+    public static final String NAME = "NAME";
+    public static final String POINTS = "POINTS";
+
+    public static final String SQL_DROP2 = "DROP TABLE IF EXITSTS " + TABLE_NAME2;
+    public static final String SQL_CREATE2 = "CREATE TABLE " + TABLE_NAME2 + "(" + HIGHSCORE_ID +
+            " INTEGER PRIMARY KEY," + NAME + " STRING," + POINTS + " STRING)";
+    public static final String STMT_INSERT2 = "INSERT INTO " +TABLE_NAME2 + "(" + NAME +"," + POINTS+
+            ") " + "VALUES (?,?)";
+
+    public static final String[] ALL_COLUMNS2 = new String[] {HIGHSCORE_ID + " AS _id", NAME, POINTS};
+
 
 }

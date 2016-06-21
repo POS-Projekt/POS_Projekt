@@ -21,6 +21,7 @@
         <activity android:name=".Category" />
         <activity android:name=".NewQuestion" />
         <activity android:name=".Rules" />
+        <activity android:name=".GameOver"/>
 
     </application>
 

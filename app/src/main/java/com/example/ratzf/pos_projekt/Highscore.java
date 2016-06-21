@@ -1,18 +1,24 @@
 package com.example.ratzf.pos_projekt;
 
-import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 /**
  * Created by ratzf on 16.06.2016.
  */
 public class Highscore extends AppCompatActivity {
+
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,45 @@ public class Highscore extends AppCompatActivity {
             }
         });
 
+        listView = (ListView) findViewById(R.id.listView);
+
+        showScores();
     }
+
+    private void showScores() {
+        ArrayList<HighscoreClass> alist = new ArrayList();
+        DBHelper helper = new DBHelper(this);
+        SQLiteDatabase db = helper.getReadableDatabase();
+
+        Cursor cursor = db.query(Constants.TABLE_NAME2,
+                Constants.ALL_COLUMNS2,
+                null,
+                null,
+                null,
+                null,
+                Constants.POINTS);
+
+        while (cursor.moveToNext()) {
+            String name = cursor.getString(cursor.getColumnIndex(Constants.NAME));
+            int points = cursor.getInt(cursor.getColumnIndex(Constants.POINTS));
+
+            HighscoreClass highscoreClass = new HighscoreClass(name, points);
+            alist.add(highscoreClass);
+        }
+
+        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2,
+                cursor, COLUMNS_FROM_DB, LAYOUT_ITEMS_TO_FILL,0);
+
+        listView.setAdapter(adapter);
+    }
+
+    private static final int[] LAYOUT_ITEMS_TO_FILL = new int[]{
+            android.R.id.text1,
+            android.R.id.text2
+    };
+
+    private static final String[] COLUMNS_FROM_DB = new String [] {
+            Constants.NAME, Constants.POINTS
+    };
 
 }

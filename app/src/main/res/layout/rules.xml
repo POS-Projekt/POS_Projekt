@@ -8,7 +8,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Regeln"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:textSize="50px"
+        android:textColor="#ffffff" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -25,32 +28,31 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hier werden die einzelnen wichtigen Felder der Einstellungen erklärt,
-                um diese ohne Probleme zu ändern.
+                android:text=" Hier werden die einzelnen wichtigen Felder der Einstellungen
+ erklärt, um diese ohne Probleme zu ändern.
 
-                Anzahl der Fragen: In diesem Punkt kann man die Anzahl der gwünschten Fragen einstellen
-                Steht in diesem Feld nichts, werden automatisch Fragen gestellt, bis eine falsche
-                Antwort gewählt wurde.
-                Sollte die Eingabe an gewünschten Fragen größer sein, als jende die vorhanden sind, wird
-                automatisch abgebrochen und das Spiel ist gewonnen.
+ Eigene Fragen erstellen:
+  Unter diesem Menüpunkt kann man eine eigene Frage
+  erstellen, diese wird bei der Auswahl des Buttons Speichern
+  automatisch in einer Datenbank gespeichert und steht ab
+  diesem Zeitpunkt immer zur Verfügung.
+  Fragen können ohne Begrenzung erstellt werden
+  !!! Vorsicht: Es muss auf die richtige Schreibweise und auf
+  die Leerzeichen geachtet werden !!!
 
-                Eigene Fragen erstellen: Unter diesem Menüpunkt kann man eine eigene Frage erstellen,
-                diese wird bei der Auswahl des Buttons Speichern automatisch in einer Datenbank
-                gespeichert und steht ab diesem Zeitpunkt immer zur Verfügung.
-                Fragen können ohne Begrenzung erstellt werden
-                !!! Vorsicht: Es muss auf die richtige Schreibweise und auf die Leerzeichen geachtet
-                werden !!!
+ Kategorien festlegen:
+  Wenn einem die Kategorie Geschichte nicht gefällt kann man
+  sie aushackerln und diese Kategorie wird ab diesem
+  Zeitpunkt nicht mehr angezeigt, bis diese Checkbox wieder
+  angehackt wird.
 
-                Kategorien festlegen: Wenn einem die Kategorie Geschichte nicht gefällt kann man sie
-                aushackerln und diese Kategorie wird ab diesem Zeitpunkt nicht mehr angezeigt, bis diese
-                Checkbox wieder angehackt wird.
+ Zum Spiel:
 
-                Zum Spiel:
-
-                Wenn das Spiel gestartet wird, kommt man zu dem Fenster, wo man eine Kategorie wählt.
-                Von dieser Kategorie werden dann zwei Fragen gestellt.
-                Ein Timer zählt eine Zeit von 15 Sekunden herunter. Ist die Zeit aus oder wird eine falsche
-                Antwort gewählt ist das Spiel beendet. Wird die richte Löaung gewählt, wird die nächste
+  Wenn das Spiel gestartet wird, kommt man zu dem Fenster,
+  wo man eine Kategorie wählt.
+  Von dieser Kategorie werden dann zwei Fragen gestellt.
+  Ein Timer zählt eine Zeit von 15 Sekunden herunter. Ist die
+  Zeit aus oder wird eine falsche Antwort gewählt ist das Spiel beendet. Wird die richte Löaung gewählt, wird die nächste
                 Frage gestellt oder das Fenster zum Kategorie wählen geöffnet.
                 Sollte das Spiel verloren sein wird der von dir geschaffte Highscore in die Liste
                 eingetragen.
@@ -68,7 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Zurück"
-            android:id="@+id/buttonBack" />
+            android:id="@+id/buttonBack"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 </LinearLayout>

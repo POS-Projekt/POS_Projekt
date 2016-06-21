@@ -1,5 +1,6 @@
 package com.example.ratzf.pos_projekt;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -65,10 +66,10 @@ public class Topic_Selection extends AppCompatActivity{
                 @Override
                 public void onClick(View v) {
 
-                    Button button = (Button) v;
-                    String topic = button.getText().toString();
-
-
+                    /*Button button = (Button) v;
+                    String topic = button.getText().toString();*/
+                    Intent intent = new Intent(getBaseContext(), GameOver.class);
+                    startActivity(intent);
                 }
             });
         }
