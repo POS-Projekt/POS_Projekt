@@ -28,10 +28,12 @@ public class GameOver extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        layout = (LinearLayout) getLayoutInflater().inflate(R.layout.gameover,null);
+        layout = (LinearLayout) getLayoutInflater().inflate(R.layout.gameover, null);
         setContentView(layout);
         ImageView logo = (ImageView) findViewById(R.id.imageView_logo);
-        Picasso.with(this).load("file:///android_asset/Logo.PNG").resize(150,150).into(logo);
+        Picasso.with(this).load("file:///android_asset/Logo.PNG").resize(150, 150).into(logo);
+        TextView points = (TextView) findViewById(R.id.textView_score);
+        points.setText("" + MainActivity.points);
 
         Button newGame = (Button) findViewById(R.id.button_newGame);
         newGame.setOnClickListener(new View.OnClickListener() {
@@ -50,12 +52,17 @@ public class GameOver extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        MainActivity.points = 0;
+        MainActivity.question_count = 1;
+        for (int i = 0; i < MainActivity.jokers.length; i++) {
+            MainActivity.jokers[i] = false;
+        }
+
 
         openDialog();
     }
 
-    private void openDialog()
-    {
+    private void openDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         final LinearLayout layout2 = (LinearLayout) getLayoutInflater().inflate(R.layout.enter_name, null);
         builder.setView(layout2);
@@ -77,8 +84,7 @@ public class GameOver extends AppCompatActivity {
         dialog.show();
     }
 
-    private void saveHighScoreInDB(HighscoreClass highscoreClass)
-    {
+    private void saveHighScoreInDB(HighscoreClass highscoreClass) {
 
         DBHelper helper = new DBHelper(getBaseContext());
         SQLiteDatabase db = helper.getWritableDatabase();
@@ -86,6 +92,6 @@ public class GameOver extends AppCompatActivity {
 
         stmt.bindString(1, highscoreClass.getName());
         stmt.bindString(2, String.valueOf(highscoreClass.getPoints()));
-        finish();
+        stmt.executeInsert();
     }
 }

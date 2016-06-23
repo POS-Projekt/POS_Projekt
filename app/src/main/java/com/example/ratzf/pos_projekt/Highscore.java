@@ -48,7 +48,7 @@ public class Highscore extends AppCompatActivity {
                 null,
                 null,
                 null,
-                Constants.POINTS);
+                Constants.POINTS+" DESC");
 
         while (cursor.moveToNext()) {
             String name = cursor.getString(cursor.getColumnIndex(Constants.NAME));

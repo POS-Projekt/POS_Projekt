@@ -54,13 +54,13 @@
             <Button
                 android:layout_width="175dp"
                 android:layout_height="175dp"
-                android:text="Topic 1"
+                android:text="Nicht gesetzt"
                 android:id="@+id/button_topic1" />
 
             <Button
                 android:layout_width="175dp"
                 android:layout_height="175dp"
-                android:text="Topic 3"
+                android:text="Nicht gesetzt"
                 android:id="@+id/button_topic3" />
         </LinearLayout>
 
@@ -72,13 +72,13 @@
             <Button
                 android:layout_width="175dp"
                 android:layout_height="175dp"
-                android:text="Topic 2"
+                android:text="Nicht gesetzt"
                 android:id="@+id/button_topic2" />
 
             <Button
                 android:layout_width="175dp"
                 android:layout_height="175dp"
-                android:text="Topic 4"
+                android:text="Nicht gesetzt"
                 android:id="@+id/button_topic4" />
         </LinearLayout>
     </LinearLayout>

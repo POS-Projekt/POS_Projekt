@@ -1,9 +1,11 @@
 package com.example.ratzf.pos_projekt;
 
+import java.io.Serializable;
+
 /**
  * Created by preiter on 09.06.2016.
  */
-public class QuestionClass {
+public class QuestionClass implements Serializable {
     String question, wrongAnswer1, wrongAnswer2, wrongAnswer3, rightAnswer, category;
 
     public QuestionClass(String category, String question, String wrongAnswer1, String wrongAnswer2, String wrongAnswer3, String rightAnswer) {

@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -42,8 +43,8 @@ public class NewQuestion extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                QuestionClass questionClass = new QuestionClass(Integer.toString((int) categorySpinner.getSelectedItemId())
-                        , question.getText().toString(), wrongAnswer1.getText().toString(),
+                QuestionClass questionClass = new QuestionClass(categorySpinner.getSelectedItem().toString()
+                        ,question.getText().toString(), wrongAnswer1.getText().toString(),
                         wrongAnswer2.getText().toString(), wrongAnswer3.getText().toString(),
                         rightAnswer.getText().toString());
                 saveQuestion(questionClass);
@@ -72,6 +73,8 @@ public class NewQuestion extends AppCompatActivity {
         stmt.bindString(4, questionClass.getWrongAnswer2());
         stmt.bindString(5, questionClass.getWrongAnswer3());
         stmt.bindString(6, questionClass.getRightAnswer());
+        stmt.executeInsert();
+
 
         finish();
     }
